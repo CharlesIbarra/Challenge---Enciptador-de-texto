@@ -1,0 +1,311 @@
+/*---Fuentes---*/
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*---Variables Globales---*/
+
+:root {
+    /*colors*/
+    --blanco: #FFFFFF;
+    --DarkBlue: #03346E;
+    --FireBrick: #B22222;
+    --indigo: #4B0082;
+    --MidnightBlue: #191970;
+    --whiteBlue: #D8DFE8;
+    --AirForceBlue: #698996;
+    --Perla: #F6F5F2;
+    --Caribbean: #156064;
+
+    /*fonts*/
+    --Baskervville: "Baskervville SC", serif;
+    --Asap: "Asap", serif;
+    --Cinzel: "Cinzel", serif;
+    --Tinos: "Tinos", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: var(--DarkBlue);
+    color: var(--blanco);
+}
+
+img {
+    max-width: 100%;
+}
+
+/*---Encabezado---*/
+
+header {
+    position: absolute;
+    margin: 40px 0px 0px 40px;
+}
+
+header .logo {
+    display: flex;
+    align-items: flex-start;
+    width: 120px;
+    height: 48px;
+}
+
+body {
+    background: url(../assets/background.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/*---Sección Principal (main)---*/
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.input__texto {
+    width: 60%;
+    margin: 168px 0px 0px 140px;
+    background: transparent;
+}
+
+.input_texto_area {
+    width: 100%;
+    max-width: 600px;
+    height: 280px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    outline: none;
+    border: 1.5px solid var(--MidnightBlue);
+    border-radius: 5%;
+    resize: none;
+    background-color: var(--p);
+    box-shadow: 10px 24px 32px -8px var(--AirForceBlue);
+}
+
+.input_texto_area::placeholder, :focus {
+    color: var(--DarkBlue);
+    font-family: var(--Asap);
+}
+
+.encriptador__aviso {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+    position: relative;
+    margin-top: 20px; /* Ajuste de margen superior */
+}
+
+.texto__aviso {
+    font-family: var(--Tinos);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2; /* Ajuste de line-height */
+    color: var(--DarkBlue);
+}
+
+.img__aviso {
+    width: 24px; /* Ajuste de tamaño de la imagen si es necesario */
+    height: auto;
+}
+
+.encriptador__input {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    position: absolute;
+    top: 526px;
+}
+
+.boton__encriptar, .boton__desencriptar, .buton__copiar {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    font-family: var(--Cinzel);
+    font-size: 24px;
+    text-align: center;
+    border: 1.5px solid var(--MidnightBlue);
+    border-radius: 24px;
+    line-height: 16px;
+    color: var(--blanco);
+    background: var(--DarkBlue);
+    cursor: pointer;
+    box-shadow: 0px 20px 29px -5px var(--blanco);
+}
+
+.boton__encriptar:active, .boton__desencriptar:active, .buton__copiar:active {
+    box-shadow: inset 2px 2px 4px var(--AirForceBlue);
+    inset: -3px -4px 8px var (--DarkBlue);
+    color: var(--whiteBlue);
+}
+
+.output__texto {
+    width: 275px;
+    height: 580px;
+    background: var(--blanco);
+    box-shadow: 10px 24px 32px -8px var(--AirForceBlue);
+    border: 1.5px solid var(--MidnightBlue);
+    border-radius: 23px;
+    background-color: var(--p);
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.encriptador__output {
+    width: 270px;
+    height: 185px;
+    background-color: var(--p);
+    margin: auto;
+}
+
+.img__eyes {
+    border-radius: 24px;
+}
+
+.texto__uno {
+    font-family: var(--Baskervville);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Caribbean);
+}
+
+.texto__dos {
+    font-family: var(--Baskervville);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 240%;
+    text-align: center;
+    color: var(--Caribbean);
+}
+
+.evaluar {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--DarkBlue);
+    font-family: var(--Baskervville);
+    background-color: var(--p);
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    align-items: center;
+    text-align: center;
+    border: none;
+    resize: none;
+}
+
+.evaluar:focus {
+    outline: none;
+}
+
+/* Hover effects */
+.boton__encriptar:hover, .boton__desencriptar:hover, .buton__copiar:hover {
+    transform: scale(0.95);
+    opacity: 0.7;
+    color: var(--DarkBlue);
+    font-size: 24px;
+    background-color: var(--Perla);
+}
+
+/* Footer */
+.footer {
+    margin-top: 150px;
+    padding: 10px;
+    color: var(--Caribbean);
+    text-align: center;
+    height: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--DarkBlue);
+}
+
+.github:hover, .linkedin:hover {
+    color: var(--Perla);
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+/*---Resposivo---*/
+@media (max-width: 1250px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .input__texto {
+        margin: 168px 0 0 0;
+        align-items: center;
+        width: 100%;
+    }
+    .encriptador__input {
+        align-items: center;
+        position: inherit;
+    }
+    .texto__aviso {
+        margin: 15px;
+    }
+    .output__texto {
+        width: 665px;
+        height: 300px;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .encriptador__output {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20%;
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .img__eyes {
+        display: none;
+    }
+    .buton__copiar {
+        position: inherit;
+        width: 100%;
+    }
+    .evaluar {
+        height: 210px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 720px) {
+    .header .logo {
+        width: 100%;
+        background: var(--blanco);
+        padding: 2px;
+    }
+    .input__texto {
+        width: 90%;
+        font-size: 24px;
+    }
+    .encriptador__input {
+        display: grid;
+        gap: 21px;
+    }
+    .output__texto {
+        width: 90%;
+    }
+    .copyright {
+        font-size: 20px;
+    }
+}
